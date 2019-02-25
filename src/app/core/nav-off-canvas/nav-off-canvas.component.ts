@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-off-canvas',
   templateUrl: './nav-off-canvas.component.html',
-  styleUrls: ['./nav-off-canvas.component.css']
+  styleUrls: ['./nav-off-canvas.component.scss']
 })
 export class NavOffCanvasComponent implements OnInit {
 
   constructor() { }
+@Input() view:boolean=true;
 
-  ngOnInit() {
+
+  ngOnInit() {console.log(this.view);
   }
-
+  
 }

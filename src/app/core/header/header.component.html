@@ -1,3 +1,53 @@
-<p>
-  header works!
-</p>
+<app-nav-off-canvas [view]="menuToggle"></app-nav-off-canvas>
+
+<header class="navbar">
+  <div class="siteBranding">
+    <div class="inner">
+      <span class="space" [hidden]="menuToggle"></span>
+      <span class="offcanvasToggle" href="" (click)="onMenuToggle()">☰</span>
+    </div>
+  </div>
+
+  <app-navigation-main></app-navigation-main>
+
+  <div class="toolbar">
+    <div class="inner">
+      <div class="tools">
+        <div class="search">
+          <i (click)="showSearch= true" class="iconSearch"></i>
+        </div>
+        <div class="account">
+          <a *ngIf="!user; else whenLoggedIn" routerLink="/register-login"></a>
+
+          <ng-template #whenLoggedIn>
+            <a routerLink="/account/profile"></a>
+          </ng-template>
+
+          <i class="iconHead"></i>
+          <ul *ngIf="user" class="toolbarDropdown">
+            <li class="subMenuUser">
+              <div class="userInfo">
+                <h6 class="userName">{{ user.email }}
+                </h6>
+              </div>
+            </li>
+            <li>
+              <a routerLink="/account/profile" href="">My Profile</a>
+            </li>
+            <li>
+              <a routerLink="/account/orders" href="">Orders List</a>
+            </li>
+            <li class="subMenuSeparator"></li>
+            <li>
+              <a href="" (click)="onLogOut($event)">
+                <i class="iconUnlock"></i>Logout</a>
+            </li>
+          </ul>
+        </div>
+
+        <app-toolbar-cart></app-toolbar-cart>
+      
+      </div>
+    </div>
+  </div>
+</header>

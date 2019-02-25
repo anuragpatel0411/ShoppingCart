@@ -1,0 +1,274 @@
+.navbar{
+  padding: 8px 0;
+  border-top: 1px solid #e1e7ec;;
+  border-bottom: 1px solid #e1e7ec;
+  margin: 3px 0;
+}
+.space{
+  margin: 125px;
+}
+.siteBranding{
+  position: stick;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 5;
+  margin: 5px 0;
+  .inner {
+      display: table;
+      height: 100%;
+      min-height: 100%;
+      > .offcanvasToggle{
+        vertical-align: middle;
+        padding: 10px 30px;
+        font-size: 25px;
+      }
+  }
+}
+
+.offcanvasToggle {
+  width: 74px;
+  transition: color 1s;
+  border-right: 1px solid #e1e7ec;
+  color: #606975;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  &::before {
+    display: inline-block;
+    font-family: feather;
+  }
+  &:hover { color: #0da9ef; }
+  &.menu-toggle { display: none; }
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  height: 100%;
+  z-index: 5;
+  .inner {
+    display: table;
+    height: 100%;
+    min-height: 100%;
+    }
+
+  .tools {
+    display: table-cell;
+    vertical-align: middle;
+    }
+}
+
+.search, .account{
+  display: inline-block;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-left: 6px;
+  transition: background-color .35s;
+  border: 1px solid #e1e7ec;
+  border-radius: 50%;
+  color: #606975;
+  font-size: 17px;
+  cursor: pointer;
+  vertical-align: middle;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  > i { line-height: 40px; }
+  > a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  &:hover { background-color: #f5f5f5; }
+}
+
+.search  > i { line-height: 40px; }
+
+.account{
+  > a::after {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 18px;
+    margin-top: -10px;
+    content: '';
+  }
+  > .toolbarDropdown {
+    left: 50%;
+    margin-left: -(100px);
+  }
+}
+
+.toolbar .account:hover{
+  > .toolbarDropdown {
+    display: block;
+    animation: submenu-show .3s cubic-bezier(.68, -.55, .265, 1.55);
+  }
+}
+
+.iconHead:before{
+  content:"\e074"
+}
+
+.iconSearch:before{
+  content:"\e036"
+}
+
+.iconUnlock:before{
+  content:"\e008"
+}
+
+.toolbarDropdown {
+  @extend %sub-menu;
+  margin-top: 7px !important;
+  text-align: left;
+}
+
+@media (max-width: 1070px) {
+  .navbar { min-height: 78px; }
+  .toolbar { right: 15px; }
+  .offcanvasToggle.menuToggle { display: table-cell; }
+  .siteMenu,
+  .offcanvasToggle.catsToggle,
+  .toolbar .account,
+  .toolbarDropdown { display: none !important; }
+  .topbar {
+    padding: {
+      right: 15px;
+      left: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .offcanvas-toggle { width: 56px; }
+}
+
+%sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  margin-top: -7px !important;
+  padding: 10px 0 !important;
+  border: 1px solid #e1e7ec;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 1.5;
+  box-shadow: 0 7px 22px -5px rgba(darken(#374250, 4%), .2);
+
+  > li {
+    display: block;
+    position: relative;
+    > a {
+      display: block;
+      padding: 5px 20px !important;
+      transition: color .3s;
+      color: #606975;
+      font: {
+        size: 14px;
+        weight: 500;
+      }
+      text: {
+        align: left;
+        decoration: none;
+      }
+      > i {
+        display: inline-block;
+        margin: {
+          top: -2px;
+          right: 6px;
+        }
+        font-size: .9em;
+        vertical-align: middle;
+      }
+    }
+    &.sub-menu-user {
+      display: table;
+      width: 100%;
+      padding: 4px 17px 6px;
+      .user-ava,
+      .user-info {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .user-ava {
+        width: 44px;
+        > img {
+          display: block;
+          width: 44px;
+          padding: 3px;
+          border: 1px solid #e1e7ec;
+          border-radius: 50%;
+        }
+      }
+      .user-info {
+        padding-left: 8px;
+        > .user-name {
+          margin-bottom: 2px;
+          font-size: 14px;
+        }
+        > span { display: block; }
+      }
+    }
+    &.sub-menu-separator {
+      margin: {
+        top: 5px;
+        bottom: 3px;
+      }
+      border-top: 1px solid #e1e7ec;
+    }
+    &:hover > a { color: #0da9ef; }
+    &.active > a { color: #0da9ef; }
+    &.has-children {
+      > a {
+        padding-right: 35px !important;
+        &::after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 18px;
+          width: 0;
+          height: 0;
+          margin-top: -4px;
+          border-top: .3em solid transparent;
+          border-bottom: .3em solid transparent;
+          border-left: .32em solid;
+          content: '';
+        }
+      }
+    }
+    > .sub-menu {
+      top: -4px;
+      left: 100%;
+      margin-left: -5px;
+    }
+  }
+}
+
+// Sub Menu Animation
+@keyframes submenu-show {
+  from {
+    transform: scale(.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

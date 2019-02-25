@@ -1,0 +1,50 @@
+.w3-sidebar{
+    height:100%;
+    width:250px;
+    background-color:#374250;
+    position:fixed!important;
+    z-index:2;
+    overflow:auto;
+}
+.w3-button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+
+.w3-bar-block .w3-bar-item{
+    width:100%;
+    display:block;
+    padding:15px 20px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0;
+    border-bottom: 1px solid #4f5965;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.w3-bar .w3-button{
+    white-space:normal
+}
+.w3-button:hover{
+    color: #0da9ef!important;
+}
+
+
+
+
+
+@media (max-width:992px){.w3-sidebar .w3-collapse{display:none}}
