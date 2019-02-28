@@ -1,21 +1,4 @@
-<div class="pageTitle">
-    <div class="container">
-        <div class="column">
-            <h1>Cart</h1>
-        </div>
-        <div class="column">
-            <ul class="breadcrumbs">
-                <li>
-                    <a routerLink="/home" href="">Home</a>
-                </li>
-                <ng-container>
-                    <li class="separator">&nbsp;</li>
-                    <li>Cart</li>
-                </ng-container>
-            </ul>
-        </div>
-    </div>
-</div>
+<app-page-title title="Cart" [children]="[{title: 'Cart'}]"></app-page-title>
 
 <div class="container">
     <div class="table-responsive shopping-cart">
