@@ -1,0 +1,27 @@
+<div class="productDetail" *ngFor="let product of products">
+    <div *ngIf="product">
+        <app-page-title title="{{product.productName}}" [children]="[{title: 'Products',link:'/products'},{title: product.productName}]"></app-page-title>
+        <!--Product Page Content-->
+        <div class="container padding-bottom:12px margin-bottom:12px">
+            <div class="row">
+                <!--Product Gallery-->
+                <div class="col-xs-12 col-md-12 col-lg-5 col-xl-5">
+                  <img src="{{product.productImage}}"> 
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-7 col-xl-7">
+                    <div class="pname">{{product.productName}}</div>
+                    <div class="pcategory">{{product.productCategory}}</div>
+                    <div class="pprice">&#8377; {{product.productPrice}}</div>
+                    <div>Description:</div>
+                    <div class="pdescription">{{product.productDescription}}</div>
+                    <div>Features:
+                            <div class="pfeature" *ngFor="let feature of product.productFeatures">
+                                    <ul><li>{{feature}}</li></ul>
+                            </div>
+                    </div>        
+                    <button class="btn btn-success">Add to cart</button>           
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

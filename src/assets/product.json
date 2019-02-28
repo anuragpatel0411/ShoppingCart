@@ -1,0 +1,95 @@
+     
+    [
+       {
+         "productName":"Cool Eye Glasses",
+         "productImage":"./assets/images/glasses5465.png",
+         "productPrice":"2000",
+         "productDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367857",
+         "productCategory":"Spectacles",
+         "status":"On Sale"
+       },
+            
+       { "productName":"Stylish Sling",
+         "productImage":"./assets/images/handbag3568.jpg",
+         "productPrice":"800",
+         "productDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367855",
+         "productCategory":"Women Purse & Handbags ",
+         "status":"New Arrivals"
+       },
+               
+       { "productName":"Cute Bears",
+         "productImage":"./assets/images/gift14145455.jpg",
+         "productPrice":"450",
+         "productDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367854",
+         "productCategory":"Gift Items",
+         "status":"Best Rated"
+       },
+
+       { "productName":"Lord Ganesha",  
+         "productImage":"./assets/images/ganeshji52521.jpg",
+         "productPrice":"2500",
+         "aboutThisProduct":"Auspicious idol of Lord Ganesha",
+         "pr ductDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367853",
+         "productCategory":"Home Decor",
+         "status":"New Arrivals"
+       },
+
+       { "productName":"Handy Tools Set",
+         "productImage":"./assets/images/screwdriver5444.jpg",
+         "productPrice":"3000",
+         "productDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367852",
+         "productCategory":"collegebag",
+         "status":"On Sale"
+       },
+       
+       { "productName":"Brown Teddy Bear",
+         "productImage":"./assets/images/softtoy54544.jpg",
+         "productPrice":"4000",
+         "productDescription":"This is a very nice bag.",
+         "productFeatures":
+            [
+              "kjdhfkdhfdfh",
+              "jhdhfhfhrhfh",
+              "dlhkrehtruhgh"
+            ],
+         "productSKU":"2435367850",
+         "productCategory":"Gift items",
+         "status":"Best Rated"
+       }
+    ]
+  
