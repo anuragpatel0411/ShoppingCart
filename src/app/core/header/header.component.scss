@@ -81,7 +81,10 @@
     align: center;
     decoration: none;
   }
-  > i { line-height: 40px; }
+  > i{
+      line-height: 40px;
+      color: #606975;
+    }
   > a {
     display: block;
     position: absolute;

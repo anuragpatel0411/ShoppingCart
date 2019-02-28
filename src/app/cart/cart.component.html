@@ -1,0 +1,101 @@
+<div class="pageTitle">
+    <div class="container">
+        <div class="column">
+            <h1>Cart</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a routerLink="/home" href="">Home</a>
+                </li>
+                <ng-container>
+                    <li class="separator">&nbsp;</li>
+                    <li>Cart</li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="table-responsive shopping-cart">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Subtotal</th>
+                    <th class="text-right">
+                        <button class="btn btn-sm btn-outline-danger" (click)="onClearCart($event)">Clear Cart</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items">
+                    <td>
+                        <div class="product-item">
+                            <a class="product-thumb" routerLink="/products/{{item.product.id}}">
+                                <img [src]="item.product.imageURLs[0]" alt="Product">
+                            </a>
+                            <div class="product-info">
+                                <h4 class="product-title">
+                                    <a routerLink="/products/{{item.product.id}}">{{item.product.name}}Name</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="count-input">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" (click)="decreaseAmount(item)">-</button>
+                                </div>
+                                <input type="text" class="form-control text-center" placeholder=""(blur)="checkAmount(item)">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" (click)="increaseAmount(item)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center text-lg text-medium">Price</td>
+                    <td class="text-center text-lg text-medium">{{ (item.product.price * item.amount) | currency }}</td>
+                    <td class="text-right">
+                        <a class="remove-from-cart"
+                        href="#"
+                        data-toggle="tooltip"
+                        title="Remove item"
+                        (click)="onRemoveItem($event, item)">
+                        <i class="icon-cross"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <ng-template #noItemsInCart>
+                <tbody>
+                    <tr>
+                        <td colspan="5">There are no items in your cart..</td>
+                    </tr>
+                </tbody>
+            </ng-template>
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <div class="shopping-cart-footer">
+        <div class="column">
+        </div>
+        <div class="column text-lg">Total:
+            <span class="text-medium">Rs. {{totalAmount}}</span>
+        </div>
+    </div>
+    <div class="shopping-cart-footer">
+        <div class="column">
+            <a class="btn btn-outline-secondary" routerLink="/home" style="color:#8b929a">Back to Shopping</a>
+        </div>
+        <div class="column">
+            <a class="btn btn-success" routerLink="/checkout" style="color:#fff" href="">Checkout</a>
+        </div>
+    </div>
+</div>

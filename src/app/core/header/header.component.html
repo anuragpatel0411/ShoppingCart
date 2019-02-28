@@ -14,8 +14,8 @@
     <div class="inner">
       <div class="tools">
         <div class="search">
-          <i (click)="showSearch= true" class="iconSearch"></i>
-        </div>
+            <i class="material-icons">search</i>
+          </div>
         <div class="account">
           <a *ngIf="!user; else whenLoggedIn" routerLink="/register-login"></a>
 
@@ -23,7 +23,9 @@
             <a routerLink="/account/profile"></a>
           </ng-template>
 
-          <i class="iconHead"></i>
+          <a routerLink='/register-login'>
+            <i class="material-icons">person</i>
+          </a>
           <ul *ngIf="user" class="toolbarDropdown">
             <li class="subMenuUser">
               <div class="userInfo">
