@@ -1,0 +1,107 @@
+.pageTitle {
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 20px;
+    border-bottom: 1px solid #e1e7ec;
+    background-color: #f5f5f5;
+    > .container,
+    > .container-fluid { display: table; }
+    .column {
+      display: table-cell;
+      vertical-align: middle;
+      &:first-child { padding-right: 20px; }
+      color: #374250;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font: {
+        size: 24px;
+        weight: normal;
+      }
+      line-height: 1.25;
+    }
+    @media (max-width: 576px){ margin-bottom: 53px; }
+  }
+    
+  .breadcrumbs {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    > li {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 5px 0;
+      color: #9da9b9;
+      font-size: 14px;
+      cursor: default;
+      vertical-align: middle;
+      &.separator {
+        width: 3px;
+        height: 3px;
+        margin-top: 2px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: #9da9b9;
+      }
+      > a {
+        transition: color .25s;
+        color: #606975;
+        text-decoration: none;
+        &:hover { color: #0da9ef; }
+      }
+    }
+  }
+  
+.block{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.facebookBtn, .twitterBtn, .googleBtn {
+  text-transform: none;
+  border-radius: 50px;
+  > i { margin-top: 0; }
+}
+.facebookBtn {
+  border-color: #3b5998;
+  background-color: transparent;
+  color: #3b5998;
+  &:hover {
+    background-color: #3b5998;
+    color: #fff;
+  }
+}
+.twitterBtn {
+  border-color: #55acee;
+  background-color: transparent;
+  color: #55acee;
+  &:hover {
+    background-color: #55acee;
+    color: #fff;
+  }
+}
+.googleBtn {
+  border-color: #dd4b39;
+  background-color: transparent;
+  color: #dd4b39;
+  &:hover {
+    background-color: #dd4b39;
+    color: #fff;
+  }
+}
+
+.loginBox{
+    
+    border: 1px solid #e1e7ec;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 40px 24px;
+}
+
+.blockTitle{
+    margin-bottom:20px;
+    font-size: 25px;
+}

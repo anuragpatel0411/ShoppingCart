@@ -1,0 +1,20 @@
+[
+    {
+        "productid": "01232",
+        "productName": "ABCD",
+        "productPrice": "500",
+        "imgUrl": "./assets/images/01232slider.jpg"
+    },
+    {
+        "productid": "01233",
+        "productName": "MNOP",
+        "productPrice": "500",
+        "imgUrl": "./assets/images/01233slider.jpg"
+    },
+    {
+        "productid": "01231",
+        "productName": "WXYZ",
+        "productPrice": "500",        
+        "imgUrl": "./assets/images/01231slider.jpg"
+    }    
+]

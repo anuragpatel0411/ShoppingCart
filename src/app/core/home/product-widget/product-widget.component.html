@@ -1,0 +1,22 @@
+<div *ngIf="products" class="widget widget-featured-products">
+  <h3 class="widget-title">{{ widgetTitle }}</h3>
+
+  <div *ngFor="let product of products" class="entry" [hidden]="!(product.status==widgetTitle)">
+    <div *ngIf="product.status==widgetTitle" class="cond">
+      <div class="entry-thumb">
+        <a routerLink="/products/{{ product.id }}">
+          <img src="{{ product.productImage }}" alt="{{ product.productName }}">
+        </a>
+      </div>
+      <div class="entry-content">
+        <h4 class="entry-title">
+          <a routerLink="/products/{{ product.productSKU }}">
+            {{ product.productName}}
+          </a>
+        </h4>
+        <span class="entry-meta">&#8377; {{ product.productPrice }}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
