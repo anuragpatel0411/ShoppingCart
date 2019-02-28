@@ -7,6 +7,7 @@ import { compileBaseDefFromMetadata } from '@angular/compiler';
 import { RegisterLoginComponent } from './account/register-login/register-login.component';
 import { AccountComponent } from './account/account.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'register-login', component: RegisterLoginComponent },
   { path: 'account', component: AccountComponent},
   { path: 'products', component: ProductListComponent },
-  // { path: 'products/:SKU', component: ProductDetailComponent}
+  { path: 'products/:SKU', component: ProductDetailComponent}
 ];
 
 @NgModule({

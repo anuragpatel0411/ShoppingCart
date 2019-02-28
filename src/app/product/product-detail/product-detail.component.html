@@ -1,5 +1,5 @@
 <div class="productDetail" *ngFor="let product of products">
-    <div *ngIf="product">
+    <div *ngIf="product && (sku==product.productSKU)">
         <app-page-title title="{{product.productName}}" [children]="[{title: 'Products',link:'/products'},{title: product.productName}]"></app-page-title>
         <!--Product Page Content-->
         <div class="container padding-bottom:12px margin-bottom:12px">
