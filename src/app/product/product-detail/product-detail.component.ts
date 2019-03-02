@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,18 +11,40 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
 
   sku: any;
+  a: number[]=[0];
 
   products: any;
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute,private cart: AppComponent) {
     route.params.subscribe(params => { this.sku = params['SKU'];});
    }
 
   ngOnInit() {
     this.http.get('./../../assets/product.json')
     .subscribe((product) => {
-      this.products = product;      
-      console.log(this.products);
+      this.products = product; 
     })
+  }
+
+  addToCart(){
+    let temp = this.sku;
+    let quantity: number= 1;
+    console.log(this.cart.cartProduct.indexOf(this.sku));
+    if(this.cart.cartProduct.indexOf(this.sku)== -1){
+      this.cart.cartProduct.push(temp);
+      this.cart.cartQuantity.push(quantity);
+    }
+    else{
+      for(let i=0; i<this.cart.cartProduct.length; i++){
+        if(i == this.cart.cartProduct.indexOf(this.sku)){
+          this.cart.cartQuantity[i]++;
+        }
+      }
+    }
+    // this.cart.cartProduct.push(temp);
+    // this.cart.cartQuantity.push(quantity);
+    console.log(this.cart.cartQuantity);
+    console.log(this.cart.cartProduct);
+
   }
 
 }

@@ -1,1 +1,26 @@
-<app-register-login></app-register-login>
+
+<div>
+    <div [hidden]="user">
+        <app-page-title title="Account" [children]="[{title: 'Account'}]"></app-page-title>
+
+        <div class="container" *ngFor="let acc of users">
+            <div *ngIf="acc.username==account || acc.email==account" class="row">
+                <div class="col-sm-4">
+                    <img src="{{ acc.profileImg }}" alt="acc.firstName">
+                </div>
+                <div class="col-sm-8 data">
+                    <div class="name">{{ acc.firstName }} {{ acc.lastName }}</div>
+                    <div class="email">{{ acc.email }}</div>
+                    <div class="buttonr">
+                        <button class="btn btn-primary margin-bottom-none" (click)="logout()">Logout</button>    
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div [hidden]="!user">
+        <app-register-login></app-register-login>
+    </div>
+</div>
+

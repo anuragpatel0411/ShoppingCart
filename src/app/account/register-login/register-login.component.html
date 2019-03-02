@@ -1,30 +1,9 @@
-<div class="pageTitle">
-  <div class="container">
-      <div class="column">
-          <h1>Login / Register Account</h1>
-      </div>
-      <div class="column">
-          <ul class="breadcrumbs">
-              <li>
-                  <a routerLink="/home" href="">Home</a>
-              </li>
-              <li class="separator">&nbsp;</li>
-              <li>
-                <a routerLink="/account" href="">Account</a>
-              </li>
-              <ng-container>
-                  <li class="separator">&nbsp;</li>
-                  <li>Login/Register</li>
-              </ng-container>
-          </ul>
-      </div>
-  </div>
-</div>
+<app-page-title title="Login / Register Account" [children]="[{title: 'Login/Register'}]"></app-page-title>
 
 <div class="container block">
   <div class="row">
     <div class="col-md-6">
-      <form class="loginBox"  (ngSubmit)="onLogin()">
+      <form class="loginBox">
         <div class="row" style="margin-bottom:30px">
           <div class="col-xl-4 col-md-6 col-sm-4">
             <a class="btn btn-sm btn-block facebookBtn" href="#">
@@ -41,86 +20,70 @@
         </div>
 
         <h3 class="blockTitle">Login</h3>
-        <div class="formGroup inputGroup" [ngClass]="{'has-danger': !loginForm.get('email').valid && loginForm.get('email').touched}">
-          <input class="form-control" formControlName="email" type="email" placeholder="Email" required="">
-          <span class="input-group-addon">
-            <i class="icon-mail"></i>
+        <div [hidden]="wrongInput" class="wrongInput">Wrong email or password...</div>
+        <div class="formGroup">
+          <input class="formControl" type="email" placeholder="Email or Username" required="" [(ngModel)]="username" name="username">
+          <span class="inputGroupAddon">
+            <i class="material-icons">email</i>
           </span>
-          <div *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" class="form-control-feedback">
-            Be sure to enter a valid, existing Email.
-          </div>
         </div>
-        <div class="formGroup inputGroup" [ngClass]="{'has-danger': !loginForm.get('password').valid && loginForm.get('password').touched}">
-          <input class="form-control" formControlName="password" type="password" placeholder="Password" required="">
-          <span class="input-group-addon">
-            &#x1;
+        <div class="formGroup">
+          <input class="formControl" type="password" placeholder="Password" required="" [(ngModel)]="password" name="password">
+          <span class="inputGroupAddon">
+              <i class="material-icons">lock</i>
           </span>
-          <div *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="form-control-feedback">
-            The entered password seems to be wrong..
-          </div>
         </div>
 
         <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
-          <a class="navi-link" href="account-password-recovery.html">Forgot password?</a>
+          <a class="naviLink" href="#">Forgot password?</a>
         </div>
 
         <div class="text-center text-sm-right">
-          <button [disabled]="!loginForm.valid"class="btn btn-primary margin-bottom-none" type="submit">Login</button>
+          <button class="btn btn-primary margin-bottom-none" type="submit" (click)="onLogin()">Login</button>
         </div>
       </form>
     </div>
 
     <div class="col-md-6">
-      <div class="padding-top-3x hidden-md-up"></div>
       <h3  class="blockTitle">No Account? Register</h3>
       <p style="font-size: 15px; color: #9da9b9;">Registration takes less than a minute but gives you full control over your orders.</p>
-      <form class="row" (ngSubmit)="onRegister()">
-
+      <form class="row">
         <div class="col-sm-6">
-          <div class="form-group">
-            <label for="reg-fn">First Name</label>
-            <input class="form-control" formControlName="firstName" type="text" id="reg-fn" required="">
+          <div class="formGroup">
+            <label>First Name</label>
+            <input disabled class="formControl" type="text" required="" >
           </div>
         </div>
-
         <div class="col-sm-6">
-          <div class="form-group">
-            <label for="reg-ln">Last Name</label>
-            <input class="form-control" formControlName="lastName" type="text" id="reg-ln" required="">
+          <div class="formGroup">
+            <label>Last Name</label>
+            <input disabled class="formControl" type="text" required="">
           </div>
         </div>
-
         <div class="col-sm-12">
-          <div class="form-group" [ngClass]="{'has-danger': !registerForm.get('email').valid && registerForm.get('email').touched}">
-            <label for="reg-email">E-mail Address</label>
-            <input class="form-control" formControlName="email" type="email" id="reg-email" required>
+          <div class="formGroup">
+            <label>E-mail Address</label>
+            <input disabled class="formControl" type="email" required>
           </div>
         </div>
-
-          <div class="col-sm-6">
-            <div class="form-group" [ngClass]="{'has-danger': !registerForm.get('password').valid && registerForm.get('password').touched}">
-              <label for="reg-pass">Password</label>
-              <input class="form-control" formControlName="password" type="password" id="reg-pass" required>
-            </div>
+        <div class="col-sm-6">
+          <div class="formGroup">
+            <label>Password</label>
+            <input disabled class="formControl" type="password" required>
           </div>
-          <div class="col-sm-6">
-            <div class="form-group" [ngClass]="{'has-danger': !registerForm.get('confirmPassword').valid && registerForm.get('confirmPassword').touched}">
-              <label for="reg-pass-confirm">Confirm Password</label>
-              <input class="form-control" formControlName="confirmPassword" type="password" id="reg-pass-confirm" required>
-            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="formGroup">
+            <label>Confirm Password</label>
+            <input disabled class="formControl" type="password" required>
           </div>
-
-        <div class="col-12 text-center text-sm-right">
-
-          <div class="form-group has-danger">
-            <div class="form-control-feedback">
-              {{ registerErrors }}
-            </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="text-center text-sm-right">
+              <button disabled class="btn btn-primary margin-bottom-none" type="submit">Register</button>
           </div>
-
-          <button disabled class="btn btn-primary margin-bottom-none" type="submit">Register</button>
         </div>
       </form>
-    </div>
+    </div>  
   </div>
 </div>

@@ -1,0 +1,31 @@
+img{
+    float: right;
+    width: 70%;
+}
+
+.container{
+    padding-bottom: 50px;
+}
+
+.data{
+    padding-top: 5px;
+    .name{
+        font-size: 33px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #3f4752;
+    }
+
+    .email{
+        font-size: 25px;
+        font-weight: 450;
+        color: #565a5e;
+        padding-bottom: 30px; 
+    }
+
+    .button{
+        border-radius: 22px;
+        text-align: right; 
+        background-color: #0da9ef;
+    }
+}

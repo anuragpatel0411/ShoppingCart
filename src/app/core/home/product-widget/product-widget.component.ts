@@ -17,7 +17,6 @@ export class ProductWidgetComponent implements OnInit {
   ngOnInit() {
     this.http.get('./../../../assets/product.json').subscribe((response) => {
       this.products = response;
-      console.log(this.products);
     })
 }
 

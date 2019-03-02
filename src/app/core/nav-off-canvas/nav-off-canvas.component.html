@@ -1,9 +1,16 @@
-<div class="sidebar barBlock" [hidden]="view" id="mySidebar">
-    <span class="barItem button">Welcome</span>
+<div class="sidebar barBlock" [hidden]="view" id="mySidebar" (click)="click()">
+    <span *ngIf="user" class="barItem row">
+        <div style="width:50%;display:inline-block;">        
+            <i class="material-icons" style="font-size:99px;">person</i>
+        </div>
+        <div class="welcome">
+            Welcome 
+            <span class="username">{{ useremail }}</span>
+        </div>
+    </span>
+    <a *ngIf="user" routerLink="/account" href="#" class="barItem button">My Profile</a>
     <a routerLink="/home" href="#" class="barItem button">Home</a>
-    <a routerLink="/product" href="#" class="barItem button">Products</a>
+    <a routerLink="/products" href="#" class="barItem button">Products</a>
     <a routerLink="/cart" href="#" class="barItem button">Cart</a>
+    <a *ngIf="user" href="#" class="barItem button" (click)="logOut()">Logout</a>
 </div>
-  
-
-  

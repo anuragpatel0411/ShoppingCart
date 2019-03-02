@@ -1,0 +1,10 @@
+[
+    {
+        "firstName": "Demo",
+        "lastName": "User",
+        "username": "user",
+        "email": "user@example.com",
+        "password": "user",
+        "profileImg": "./assets/account/User.jpg"
+    }
+]

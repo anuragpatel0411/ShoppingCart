@@ -16,7 +16,6 @@ export class MainSliderComponent implements OnInit {
   ngOnInit() {
     this.http.get('./../../assets/mainSlider.json').subscribe((response) => {
       this.product = response;
-      console.log(this.product);
     })
   }
 

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OffcanvasService } from './core/shared/offcanvas.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { NavigationMainComponent } from './core/header/navigation-main/navigatio
 import { HomeComponent } from './core/home/home.component';
 import { MainSliderComponent } from './core/home/main-slider/main-slider.component';
 import { ProductWidgetComponent } from './core/home/product-widget/product-widget.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AddressComponent } from './checkout/address/address.component';
@@ -27,6 +28,7 @@ import { SidebarComponent } from './checkout/sidebar/sidebar.component';
 import { AccountComponent } from './account/account.component';
 import { RegisterLoginComponent } from './account/register-login/register-login.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,13 +53,15 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     SidebarComponent,
     AccountComponent,
     RegisterLoginComponent,
-    ProductListComponent
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     OffcanvasService

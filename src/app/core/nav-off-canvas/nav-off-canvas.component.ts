@@ -7,11 +7,29 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavOffCanvasComponent implements OnInit {
 
+  user: boolean= false;
+  useremail: string= null;
+
   constructor() { }
-@Input() view:boolean=true;
+
+  @Input() view:boolean=true;
 
 
-  ngOnInit() {console.log(this.view);
+  ngOnInit() {
+    if(localStorage.getItem('isLogin')!= null){
+      this.user=true;
+      this.useremail= localStorage.getItem('isLogin');
+    }
+  }
+    
+  click(){
+    this.view= !this.view;
+
+  }
+
+  logOut(){
+    localStorage.removeItem('isLogin');
+    location.reload();
   }
   
 }
