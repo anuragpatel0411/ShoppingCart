@@ -28,7 +28,6 @@ export class ProductDetailComponent implements OnInit {
   addToCart(){
     let temp = this.sku;
     let quantity: number= 1;
-    console.log(this.cart.cartProduct.indexOf(this.sku));
     if(this.cart.cartProduct.indexOf(this.sku)== -1){
       this.cart.cartProduct.push(temp);
       this.cart.cartQuantity.push(quantity);
@@ -40,11 +39,6 @@ export class ProductDetailComponent implements OnInit {
         }
       }
     }
-    // this.cart.cartProduct.push(temp);
-    // this.cart.cartQuantity.push(quantity);
-    console.log(this.cart.cartQuantity);
-    console.log(this.cart.cartProduct);
-
   }
 
 }

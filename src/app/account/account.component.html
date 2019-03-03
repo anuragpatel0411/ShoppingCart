@@ -6,7 +6,7 @@
         <div class="container" *ngFor="let acc of users">
             <div *ngIf="acc.username==account || acc.email==account" class="row">
                 <div class="col-sm-4">
-                    <img src="{{ acc.profileImg }}" alt="acc.firstName">
+                    <img src="{{ acc.profileImg }}" alt=acc.firstName>
                 </div>
                 <div class="col-sm-8 data">
                     <div class="name">{{ acc.firstName }} {{ acc.lastName }}</div>

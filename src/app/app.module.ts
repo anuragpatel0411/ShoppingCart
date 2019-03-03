@@ -20,10 +20,6 @@ import { ProductWidgetComponent } from './core/home/product-widget/product-widge
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { AddressComponent } from './checkout/address/address.component';
-import { ShippingComponent } from './checkout/shipping/shipping.component';
-import { PaymentComponent } from './checkout/payment/payment.component';
-import { ReviewComponent } from './checkout/review/review.component';
 import { SidebarComponent } from './checkout/sidebar/sidebar.component';
 import { AccountComponent } from './account/account.component';
 import { RegisterLoginComponent } from './account/register-login/register-login.component';
@@ -46,10 +42,6 @@ import { FormsModule } from '@angular/forms';
     ProductWidgetComponent,
     CartComponent,
     CheckoutComponent,
-    AddressComponent,
-    ShippingComponent,
-    PaymentComponent,
-    ReviewComponent,
     SidebarComponent,
     AccountComponent,
     RegisterLoginComponent,

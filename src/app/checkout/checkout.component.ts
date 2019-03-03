@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {}
+ 
+  thanks: boolean= true;
   ngOnInit() {
+  }
+
+  change(){
+    this.thanks= false;
   }
 
 }

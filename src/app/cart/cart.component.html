@@ -33,7 +33,7 @@
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity(i)">-</button>
                                 </div>
-                                <input type="text" class="form-control text-center" value={{quantity[i]}}>
+                                <input type="text" class="form-control text-center" value={{quantity[i]}}  (change)="calcTotal()">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity(i)">+</button>
                                 </div>
@@ -59,7 +59,7 @@
         <div class="column">
         </div>
         <div class="column text-lg">Total:
-            <span class="text-medium">Rs. {{total}}</span>
+            <span class="text-medium">&#8377; {{ calcTotal() }}</span>
         </div>
     </div>
     <div class="shopping-cart-footer">

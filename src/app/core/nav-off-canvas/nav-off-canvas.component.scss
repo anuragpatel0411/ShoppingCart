@@ -1,7 +1,7 @@
 .sidebar{
     height:100%;
-    width:auto;
     min-width: 250px;
+    max-width: 500px;
     background-color:#374250;
     position:fixed!important;
     z-index:3;
@@ -45,13 +45,13 @@
 }
 
 .welcome{
-    width:100%;
     display:inline-block;
     position: absolute;
     padding-top: 20px;
     .username{
         font-size: 12px;
         display: block;
+        text-transform: lowercase;
     }
 }
 

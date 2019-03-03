@@ -1,21 +1,21 @@
 <app-page-title title="Checkout" [children]="[{title: 'Checkout'}]"></app-page-title>
 
 <div class="container padding-bottom-3x mb-2">
-  <div class="row">
-    <div class="col-xl-9 col-lg-8">
-
-      <div class="checkout-steps">
-        <button [ngClass]="{'active': i === activeStep, 'active-sibling': i === activeStep-1}" *ngFor="let step of steps; let i = index"><span class="angle" *ngIf="i < steps.length-1"></span>{{step}}</button>
-      </div>
-
-      <app-address [ngClass]="{'d-none': activeStep !== 0}"></app-address>
-      <app-shipping [ngClass]="{'d-none': activeStep !== 1}"></app-shipping>
-      <app-payment [ngClass]="{'d-none': activeStep !== 2}"></app-payment>
-      <app-review [ngClass]="{'d-none': activeStep !== 3}"></app-review>
-
-    </div>
-    <div class="col-xl-3 col-lg-4">
+  <div [hidden]="!thanks" class="row">
+    <div class="col-xl-4 col-lg-5">
       <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-xl-8 col-lg-7 button">
+      <button class="btn btn-success" (click)="change()">Proceed To Checkout</button>
+    </div>
+    
+  </div>
+  <div [hidden]="thanks">
+    <div class="thankyou">Thankyou For Shopping With Us...</div>
+    <div>
+      <a routerLink='/home' class="button">
+        <input type="button" value="Back to shopping" class="btn btn-success" style="margin-left:auto;margin-right:auto;display:block">
+      </a>
     </div>
   </div>
 </div>

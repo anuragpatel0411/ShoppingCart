@@ -6,5 +6,21 @@
         "email": "user@example.com",
         "password": "user",
         "profileImg": "./assets/account/User.jpg"
+    },
+    {
+        "firstName": "Anurag",
+        "lastName": "Patel",
+        "username": "anuragpatel",
+        "email": "anuragpatel.0411@gmail.com",
+        "password": "Anur@g0411",
+        "profileImg": "./assets/account/Anurag.jpg"
+    },
+    {
+        "firstName": "Richa",
+        "lastName": "Bhardwaj",
+        "username": "richabhardwaj",
+        "email": "richabhardwaj025@gmail.com",
+        "password": "richa025",
+        "profileImg": "./assets/account/Richa.jpeg"
     }
 ]

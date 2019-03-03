@@ -1,3 +1,19 @@
-<p>
-  sidebar works!
-</p>
+<div class="sidebar">
+  <section class="widget">
+    <h3 class="widgetTitle">Order Summary</h3>
+    <table class="table">
+      <tr>
+        <td>Cart Subtotal:</td>
+        <td class="text-medium">&#8377; {{ calcTotal() }}</td>
+      </tr>
+      <tr>
+        <td>Shipping:</td>
+        <td class="text-medium">&#8377; {{ shipping }}</td>
+      </tr>
+      <tr>
+        <td>Order Total:</td>
+        <td class="text-lg text-medium">&#8377; {{ shipping + calcTotal() }}</td>
+      </tr>
+    </table>
+  </section>
+</div>

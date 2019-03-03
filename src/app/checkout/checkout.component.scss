@@ -1,0 +1,31 @@
+.button{
+  padding-top: 100px;
+  .btn{
+    border-radius: 30px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    background-color: #43d9a3;
+    &:hover{
+      background-color: #27c28a;
+      border-color: #27c28a;
+    }
+  }
+  input{
+    margin-bottom: 40px;
+  }
+}
+
+.thankyou{
+  padding-bottom: 40px;
+  font-size: 56px;
+  text-align: center;
+  color: #8b929a;
+}
+
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
