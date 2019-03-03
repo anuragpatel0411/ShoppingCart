@@ -30,8 +30,11 @@ export class CartComponent implements OnInit {
       this.quantity[i]--;
   }
 
-  onRemoveItem(sku: number){
+  onRemoveItem(sku: number,i: number){
       this.cartItem = this.cartItem.filter(cartItem => cartItem !== sku);
+      for(let j=i; j<=this.quantity.length-1; j++){
+        this.quantity[i]= this.quantity[i+1];
+      }
   }
 
   onClearCart(){

@@ -2,25 +2,29 @@
     <div *ngIf="product && (sku==product.productSKU)">
         <app-page-title title="{{product.productName}}" [children]="[{title: 'Products',link:'/products'},{title: product.productName}]"></app-page-title>
         <!--Product Page Content-->
-        <div class="container padding-bottom:12px margin-bottom:12px">
+        <div class="container">
             <div class="row">
                 <!--Product Gallery-->
-                <div class="col-xs-12 col-md-12 col-lg-5 col-xl-5">
+                <div class="col-xs-12 col-md-12 col-lg-5 col-xl-5 image">
                   <img src="{{product.productImage}}"> 
+                  <img class="thumbnail" src="{{product.productImage}}"> 
                 </div>
                 <!--Product Details-->
-                <div class="col-xs-12 col-md-12 col-lg-7 col-xl-7">
+                <div class="col-xs-12 col-md-12 col-lg-7 col-xl-7 details">
                     <div class="pname">{{product.productName}}</div>
-                    <div class="pcategory">{{product.productCategory}}</div>
+                    <div class="pcategory">( {{product.productCategory}} )</div>
                     <div class="pprice">&#8377; {{product.productPrice}}</div>
-                    <div>Description:</div>
                     <div class="pdescription">{{product.productDescription}}</div>
-                    <div>Features:
-                            <div class="pfeature" *ngFor="let feature of product.productFeatures">
-                                    <ul><li>{{feature}}</li></ul>
-                            </div>
-                    </div>        
-                    <button class="btn btn-success" (click)="addToCart()">Add to cart</button>           
+                    <div class="features">Features:   
+                        <div class="pfeature" *ngFor="let feature of product.productFeatures">
+                            <ul>
+                                <li>{{feature}}</li>
+                            </ul>
+                        </div>  
+                    </div>
+                    <div>
+                        <button class="btn btn-success" (click)="addToCart()">Add to cart</button>           
+                    </div>                       
                 </div>
             </div>
         </div>

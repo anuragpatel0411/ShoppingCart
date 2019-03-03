@@ -1,49 +1,80 @@
-.product-gallery {
-    position: relative;
-  
-    padding: {
-      top: 15px;
-      right: 15px;
-      bottom: 15px;
-      left: 15px;
-    }
-
-    border: 1px solid #e1e7ec;
-  border-radius:7px;
-
-  .product-badge {
-    top: 25px;
-    left: 15px;
-  }
-  .product-thumbnails {
-    display: block;
-    margin: 0;
-    margin-top:24px;
-    padding: 0;
-    list-style: none;
+.container{
+  padding-bottom: 50px;
+  margin-bottom: 8px;
+  .image{
+    border: 1px solid #c8cccf;
+    border-radius: 10px;
+    padding: 15px;
     text-align: center;
-
-    > li {
-      display: inline-block;
-      margin: 0 3px 10px;
-
-      > a {
-        display: block;
-        width: 94px;
-        transition: #e1e7ec .25s;
-        border: 1px solid #e1e7ec;
-        border-radius: 5px;
-        overflow: hidden;
-      }
-
-      &.active > a {
-        border-color: #0da9ef;
-        cursor: default;
-      }
+    img{
+      width: 100%;
+    }
+    .thumbnail{
+      width: 20%;
+      border: 1px solid #0da9ef;
+      border-radius: 8px;
+      margin-top: 30px;
     }
   }
+  .details{
+    padding: 15px 15px 15px 30px;
+    .pname{
+      font-size: 30px;
+      display: inline-block;
+      font-weight: 350;
+      padding-right: 10px;
+      margin-bottom: 16px;
+    }
+    .pcategory{
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 450;
+      margin-bottom: 16px;
+      color: #3f4752;
+    }
+    .pprice{
+      font-size: 30px;
+      color: #3f4752;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    .pdescription{
+      margin-bottom: 16px;
+      color: #373d46;
+      font-size: 15px;
+    }
+    .features{
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      color: #373d46;
+      font-size: 15px;
+      font-weight: 500;   
+      .pfeature{
+        color: #373d46;
+        font-size: 15px;
+        font-weight: normal;
+        ul{
+          margin-bottom: 5px;
+          margin-left: 20px;
+        }
+      }   
+    }    
+  }   
+}
 
-  img {
-    min-width: 100%;
+
+.btn{
+  border-radius: 30px;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 30px;
+  background-color: #0da9ef;    
+  border-color: #0da9ef;
+  &:hover{
+    background-color: #11709c;
+    border-color: #11709c;
   }
 }
