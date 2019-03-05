@@ -1,8 +1,14 @@
-<ngb-carousel>
-  <ng-template ngbSlide *ngFor="let item of product">
-    <img [src]="item.imgUrl" alt="item.productName">
-    <div class="carousel-caption">
-      <h3>{{item.productName}}</h3>
-    </div>
-  </ng-template>
-</ngb-carousel>
+<div class="carousel"> 
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let item of product">
+      <img [src]="item.imgUrl" alt="item.productName">
+      <div class="carousel-caption">
+        <a routerLink="/products/{{ item.productSKU }}">
+          <div class="productname">{{item.productName}}</div>
+       
+        </a>       
+        <div class="price">&#8377; {{ item.productPrice }}</div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

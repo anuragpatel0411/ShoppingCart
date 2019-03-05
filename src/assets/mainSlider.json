@@ -1,20 +1,20 @@
 [
     {
-        "productid": "01232",
-        "productName": "ABCD",
-        "productPrice": "500",
-        "imgUrl": "./assets/images/01232slider.jpg"
+        "productSKU":"2435367857",
+        "productName": "Cool Eye Glasses",
+        "productPrice": "2000.00",
+        "imgUrl": "./assets/images/2435367857.jpg"
     },
     {
-        "productid": "01233",
-        "productName": "MNOP",
-        "productPrice": "500",
-        "imgUrl": "./assets/images/01233slider.jpg"
+        "productSKU":"2435367850",
+        "productName": "Brown Teddy Bear",
+        "productPrice": "400",
+        "imgUrl": "./assets/images/2435367850.jpg"
     },
     {
-        "productid": "01231",
-        "productName": "WXYZ",
-        "productPrice": "500",        
-        "imgUrl": "./assets/images/01231slider.jpg"
-    }    
+        "productSKU":"2435367852",
+        "productName": "Handy Tools Set",
+        "productPrice": "3000.00",        
+        "imgUrl": "./assets/images/2435367852.jpg"
+    }
 ]
