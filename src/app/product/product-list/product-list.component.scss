@@ -1,0 +1,134 @@
+.topBar{
+    padding-bottom: 25px;
+}
+.title{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 0;
+    margin: 0;
+    padding: 8px 5px 8px 0;
+    color: #9da9b9;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 12px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+
+}
+
+.dropdown select{
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #606975;
+    padding: 5px 15px;
+    padding-right: 35px;
+    border: 1px solid #c8cccf;
+    margin: 0;
+    border-radius: 22px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button;
+    &:focus{
+        outline: none;
+    }
+}
+
+.dropdown::before,
+.dropdown::after{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.dropdown::after{
+    content: "\25BC";
+    height: 14px;
+    font-size: 10px;
+    line-height: 1;
+    right: 17px;
+    top: 50%;
+    margin-top: -7px;
+}
+.items-no{
+    display: inline-block;
+    width: auto;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #606975;
+}
+
+.row{
+    border-bottom: 1px solid #c8cccf;
+    margin-bottom: 30px;
+}
+
+.productList{
+    padding: 0px 15px;
+    text-align: center;
+    .item{
+        margin-bottom: 20px;
+        padding: 20px;
+        border:1px solid #c8cccf;
+        border-radius: 10px;
+        .pImg{
+            width:100%;
+            margin: 8px 0;
+            > a {
+                display: block;
+                overflow: hidden;
+              }
+            img{
+                width: 100%;
+                height: 200px;
+            }
+        }
+        >a{
+            text-decoration: none;
+            .pName{
+                transition: color .3s;
+                color: #606975;
+                font-weight: 500;
+                &:hover {  
+                    color: #0da9ef;
+                }
+              }
+        }
+        .pPrice{
+            display: block;
+            margin-bottom: 15px;
+            padding-top: 4px;
+            color: #606975;
+            font-size: 12px;
+        }
+    }
+}
+
+.btn{
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  color:#0da9ef;
+  border-radius: 30px;
+  background-color:#ffffff;    
+  border-color: #0da9ef;
+  &:hover
+   {
+     color: #ffffff;  
+     background-color: #11709c;
+     border-color: #11709c;
+   }
+}
+
+
+// img{
+//     height: 100px;
+//     width: 100px;
+// }

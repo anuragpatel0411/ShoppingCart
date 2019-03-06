@@ -1,4 +1,37 @@
 <app-page-title title="Products" [children]="[{title: 'Products'}]"></app-page-title>
+<div class="container">
+    <div class="topBar">
+        <span class="title">Sort by:</span>
+        <div class="dropdown">
+            <select name="sort">
+                <option value="low-high">Low-High Price</option>
+                <option value="high-low">High-Low Price</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+            </select>
+        </div>
+        <span class="title">Showing:</span>
+        <span class="items-no">1-8 items</span> 
+        </div>
+        <div class="row">
+            <div class="col-sm-3 productList" *ngFor="let product of products">
+                <div class="item">
+                    <div class="pImg">
+                        <a routerLink="/products/{{ product.productSKU }}">
+                            <img src="{{product.productImage}}"> 
+                        </a>
+                    </div>
+                    <a routerLink="/products/{{ product.productSKU }}">
+                        <div class="pName">{{ product.productName}}</div>
+                    </a>
+                    <div class="pPrice">&#8377; {{ product.productPrice }}</div>
+                    <div>
+                        <button class="btn btn-success" (click)="addToCart(product.productSKU)">Add to cart</button>           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 
-<div style="font-size:44px">ABHI YE BNA NAHI H.......MERA PART NAHI H YE</div>
+</div>

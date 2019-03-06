@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OffcanvasService } from './core/shared/offcanvas.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,7 +52,6 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     NgbModule,
     FormsModule,
-    ToastrModule.forRoot(),
   ],
   providers: [
     OffcanvasService
