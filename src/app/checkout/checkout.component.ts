@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-checkout',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() {}
+  constructor(private cart: AppComponent) {}
  
   thanks: boolean= true;
   ngOnInit() {
@@ -15,6 +16,12 @@ export class CheckoutComponent implements OnInit {
 
   change(){
     this.thanks= false;
+  }
+
+  clearCart(){
+    this.cart.cartProduct= [];
+    this.cart.cartQuantity= [];
+
   }
 
 }

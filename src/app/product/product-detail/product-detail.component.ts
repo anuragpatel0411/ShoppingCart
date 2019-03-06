@@ -19,8 +19,7 @@ export class ProductDetailComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.http.get('./../../assets/product.json')
-    .subscribe((product) => {
+    this.http.get('./../../assets/product.json').subscribe((product) => {
       this.products = product; 
     })
   }

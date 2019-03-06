@@ -44,7 +44,7 @@
                     <div class="text-center text-lg text-medium col-sm-2">&#8377; {{item.productPrice}}</div>
                     <div class="text-center text-lg text-medium col-sm-2">&#8377; {{ (item.productPrice * quantity[i]) }}</div>
                     <div class="text-right col-sm-2">
-                        <span (click)="onRemoveItem(item.productSKU, i)">
+                        <span class="rem" (click)="onRemoveItem(item.productSKU, i)">
                             &#10006;
                         </span>
                     </div>
