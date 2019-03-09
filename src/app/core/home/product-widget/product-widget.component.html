@@ -5,7 +5,7 @@
     <div *ngIf="product.status==widgetTitle" class="cond">
       <div class="entry-thumb">
         <a routerLink="/products/{{ product.id }}">
-          <img src="{{ product.productImage }}" alt="{{ product.productName }}">
+          <img src="{{ product.productThumb }}" alt="{{ product.productName }}">
         </a>
       </div>
       <div class="entry-content">

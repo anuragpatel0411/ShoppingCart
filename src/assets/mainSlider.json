@@ -3,18 +3,18 @@
         "productSKU":"2435367857",
         "productName": "Cool Eye Glasses",
         "productPrice": "2000.00",
-        "imgUrl": "./assets/images/2435367857.jpg"
+        "imgUrl": "./assets/images/slider/2435367857.jpg"
     },
     {
         "productSKU":"2435367850",
         "productName": "Brown Teddy Bear",
         "productPrice": "400",
-        "imgUrl": "./assets/images/2435367850.jpg"
+        "imgUrl": "./assets/images/slider/2435367850.jpg"
     },
     {
         "productSKU":"2435367852",
         "productName": "Handy Tools Set",
         "productPrice": "3000.00",        
-        "imgUrl": "./assets/images/2435367852.jpg"
+        "imgUrl": "./assets/images/slider/2435367852.jpg"
     }
 ]

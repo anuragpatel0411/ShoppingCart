@@ -9,5 +9,4 @@ export class AppComponent {
   title = 'ShoppingCart';
   cartProduct: number[]=[];
   cartQuantity: number[]=[];
-
 }

@@ -8,6 +8,7 @@ import { RegisterLoginComponent } from './account/register-login/register-login.
 import { AccountComponent } from './account/account.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'register-login', component: RegisterLoginComponent },
   { path: 'account', component: AccountComponent},
   { path: 'products', component: ProductListComponent },
-  { path: 'products/:SKU', component: ProductDetailComponent}
+  { path: 'products/:SKU', component: ProductDetailComponent},
+  { path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({

@@ -6,8 +6,13 @@
             <div class="row">
                 <!--Product Gallery-->
                 <div class="col-xs-12 col-md-12 col-lg-5 col-xl-5 image">
-                  <img src="{{product.productImage}}"> 
-                  <img class="thumbnail" src="{{product.productImage}}"> 
+                  <div>
+                    <img *ngIf="!images" src="{{product.productImage[0]}}">
+                    <img *ngIf="images" src="{{images}}"> 
+                  </div>
+                  <span *ngFor="let image of product.productImage" (click)="imgChange(image)">
+                    <img class="thumbnail" src="{{image}}">
+                  </span>
                 </div>
                 <!--Product Details-->
                 <div class="col-xs-12 col-md-12 col-lg-7 col-xl-7 details">

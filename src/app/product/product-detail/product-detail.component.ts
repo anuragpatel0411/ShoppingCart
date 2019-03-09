@@ -12,6 +12,7 @@ export class ProductDetailComponent implements OnInit {
 
   sku: any;
   a: number[]=[0];
+  images: string;
 
   products: any;
   constructor(private http: HttpClient, private route: ActivatedRoute,private cart: AppComponent) {
@@ -22,6 +23,10 @@ export class ProductDetailComponent implements OnInit {
     this.http.get('./../../assets/product.json').subscribe((product) => {
       this.products = product; 
     })
+  }
+
+  imgChange(image: string){
+    this.images=image;
   }
 
   addToCart(){

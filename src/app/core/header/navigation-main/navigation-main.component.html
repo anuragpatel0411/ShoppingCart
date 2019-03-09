@@ -15,5 +15,10 @@
           <span>Cart</span>
       </a>
     </li>
+    <li *ngIf="user"  routerLinkActive="active">
+      <a routerLink="/account" href="">
+        <span>My Profile</span>
+      </a>
+    </li>
   </ul>
 </nav>
