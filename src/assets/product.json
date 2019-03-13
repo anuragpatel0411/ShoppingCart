@@ -2,20 +2,95 @@
     {
       "productName":"Cool Eye Glasses",
       "productImage": [
-      "./assets/images/products/2435367857glasses.png",
-      "./assets/images/products/2435367857glasses2.png"
+        "./assets/images/products/2435367857glasses.jpeg",
+        "./assets/images/products/2435367857glasses2.jpeg",
+        "./assets/images/products/2435367857glasses3.jpeg"
       ],            
-      "productThumb": "./assets/images/thumb/thumb.2435367857glasses.png",
+      "productThumb": "./assets/images/thumb/thumb.2435367857glasses.jpeg",
       "productPrice":"2000.00",
-      "productDescription":"This is a very nice bag.",
+      "productDescription":"Driving, Running, Style, Biking, Eye Protection",
       "productFeatures":
         [
-          "kjdhfkdhfdfh",
-          "jhdhfhfhrhfh",
-          "dlhkrehtruhgh"
+          "Lens Color: Clear",
+          "Frame Color: BLUE",
+          "Lens Color: Clear"
         ],
       "productSKU":"2435367857",
       "productCategory":"Spectacles",
       "status":"On Sale"
+    },
+    {
+      "productName":"BONNE 15 inch Expandable Laptop Backpack",
+      "productImage": [
+        "./assets/images/products/1552386013055bag.jpeg",
+        "./assets/images/products/1552386013055bag2.jpeg"
+      ],            
+      "productThumb": "./assets/images/thumb/thumb.1552386013055bag.jpeg",
+      "productPrice":"3419.00",
+      "productDescription":"15 inch Expandable Laptop Backpack  (Blue)",
+      "productFeatures":
+        [
+          "15 inch Expandable Laptop Backpack (Blue)",
+          "Compatible Laptop Size: 15 inch"
+        ],
+      "productSKU":"1552386013055",
+      "productCategory":"Laptop Bags",
+      "status":"Best Rated"
+    },
+    {
+      "productName":"Nikon D5600 DSLR Camera Body with Dual Lens ",
+      "productImage": [
+        "./assets/images/products/1552386013054dslr.jpeg"
+      ],            
+      "productThumb": "./assets/images/thumb/thumb.1552386013054dslr.jpeg",
+      "productPrice":"46990.00",
+      "productDescription":"AF-P DX Nikkor 18 - 55 MM F/3.5-5.6G VR and 70-300 MM F/4.5-6.3G ED VR ",
+      "productFeatures":
+        [
+          "Aoto Focus-S 18-140 mm VR Kit Lens",
+          "Nikon F Mount",
+          "Shutter Speed 1/4000 - 30 sec",
+          "Auto Focus"
+        ],
+      "productSKU":"1552386013054",
+      "productCategory":"Laptop Bags",
+      "status":"New Arrivals"
+    },
+    {
+      "productName":"Fastrack Trendies Watch",
+      "productImage": [
+        "./assets/images/products/52451269854watch.jpeg",
+        "./assets/images/products/52451269854watch2.jpeg",
+        "./assets/images/products/52451269854watch3.jpeg"
+      ],            
+      "productThumb": "./assets/images/thumb/thumb.52451269854watch.jpeg",
+      "productPrice":"1880.00",
+      "productDescription":"Fastrack 38044PP01 Trendies Watch - For Men",
+      "productFeatures":
+        [
+          "Analog",
+          "Water Resistant"
+        ],
+      "productSKU":"52451269854",
+      "productCategory":"Watches",
+      "status":"Best Rated"
+    },
+    {
+      "productName":"Sandisk Cruzer Blade 32 GB",
+      "productImage": [
+        "./assets/images/products/52451474560pd.jpeg",
+        "./assets/images/products/52451474560pd2.jpeg"
+      ],            
+      "productThumb": "./assets/images/thumb/thumb.52451474560pd.jpeg",
+      "productPrice":"1880.00",
+      "productDescription":"Thanks to the 32 GB storage capacity, you can now store your favorite songs, folders, photos, and more in this Sandisk Cruzer Blade Pen Drive. Access these files on a laptop wherever you are.",
+      "productFeatures":
+        [
+          "USB 2.0|32 GB",
+          "USB 2.0|32 GB"
+        ],
+      "productSKU":"52451474560",
+      "productCategory":"Storage",
+      "status":"New Arrivals"
     }
 ]

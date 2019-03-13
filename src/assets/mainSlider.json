@@ -1,20 +1,20 @@
 [
     {
+        "productSKU":"52451269854",
+        "productName": "Fastrack Trendies Watch",
+        "productPrice": "1880.00",
+        "imgUrl": "./assets/images/slider/52451269854.jpg"
+    },
+    {
+        "productSKU":"1552386013054",
+        "productName": "Nikon D5600 DSLR Camera",
+        "productPrice": "46990.00",
+        "imgUrl": "./assets/images/slider/1552386013054.jpg"
+    },
+    {
         "productSKU":"2435367857",
         "productName": "Cool Eye Glasses",
-        "productPrice": "2000.00",
+        "productPrice": "2000.00",        
         "imgUrl": "./assets/images/slider/2435367857.jpg"
-    },
-    {
-        "productSKU":"2435367850",
-        "productName": "Brown Teddy Bear",
-        "productPrice": "400",
-        "imgUrl": "./assets/images/slider/2435367850.jpg"
-    },
-    {
-        "productSKU":"2435367852",
-        "productName": "Handy Tools Set",
-        "productPrice": "3000.00",        
-        "imgUrl": "./assets/images/slider/2435367852.jpg"
     }
 ]
